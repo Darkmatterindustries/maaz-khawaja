@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2efe7">
+  <meta name="description" content="Maaz Khawaja is a software developer and game creator. Explore The Last Map: Horse Riding, available on the Microsoft Store.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Maaz Khawaja — Software Developer & Game Creator">
+  <meta property="og:description" content="Building useful tools and worlds worth exploring.">
+  <meta property="og:image" content="/assets/maaz-khawaja.jpg">
+  <title>Maaz Khawaja — Software Developer &amp; Game Creator</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{color-scheme:light;--paper:#f2efe7;--ink:#17211b;--muted:#5f685f;--line:#d8d7ca;--accent:#c95636;--green:#294739;--white:#fffdf7;--mono:"DM Mono",monospace;--sans:Manrope,Arial,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    .topbar{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .wordmark{display:flex;gap:12px;align-items:center;text-decoration:none;font-size:14px;font-weight:800;letter-spacing:-.04em}
+    .mark{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--ink);color:var(--paper);font:11px var(--mono);letter-spacing:-.08em}
+    .nav{display:flex;gap:28px;align-items:center;font-size:13px;font-weight:700}
+    .nav a{text-decoration:none}.nav a:hover{color:var(--accent)}
+    .nav .nav-cta{padding:10px 15px;border:1px solid var(--line);border-radius:999px}
+    .hero{min-height:610px;display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:64px;padding:78px 0 88px}
+    .eyebrow,.section-label{font:11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:500}
+    h1{max-width:680px;margin:22px 0 24px;font-size:clamp(46px,7vw,82px);line-height:.99;letter-spacing:-.085em;font-weight:700}
+    h1 span{color:var(--green)}
+    .intro{max-width:525px;color:var(--muted);font-size:17px;line-height:1.8}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 19px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:800;transition:transform .2s,background .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-primary{background:var(--ink);color:var(--white)}.button-primary:hover{background:var(--green)}
+    .button-plain{border:1px solid var(--line);background:transparent}
+    .arrow{font-size:17px;line-height:1}
+    .portrait-wrap{position:relative;width:min(100%,390px);margin-left:auto}
+    .portrait-frame{position:relative;z-index:1;aspect-ratio:4/5;overflow:hidden;border-radius:190px 190px 22px 22px;background:#d4d0c5}
+    .portrait-frame img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 38%;filter:grayscale(1);mix-blend-mode:multiply}
+    .portrait-ring{position:absolute;inset:-22px -24px 22px 24px;border:1px solid #b6b5a8;border-radius:200px 200px 28px 28px}
+    .portrait-note{position:absolute;right:-16px;bottom:30px;z-index:2;padding:13px 17px;background:var(--white);border:1px solid var(--line);box-shadow:0 12px 34px #17211b12;border-radius:12px;font:10px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+    .portrait-note strong{display:block;margin-top:4px;color:var(--green);font:700 13px var(--sans);letter-spacing:0;text-transform:none}
+    .divider{border:0;border-top:1px solid var(--line);margin:0}
+    .work{padding:82px 0 90px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+    h2{margin:10px 0 0;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.065em}
+    .section-note{max-width:350px;margin:0;color:var(--muted);font-size:13px}
+    .project{position:relative;isolation:isolate;min-height:360px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;border-radius:20px;background:var(--green);color:#f5f1e7}
+    .project-info{position:relative;z-index:2;padding:clamp(28px,5vw,58px);align-self:center}
+    .project-info .eyebrow{color:#d89a78}
+    .project h3{max-width:440px;margin:18px 0 14px;font-size:clamp(32px,5vw,55px);line-height:1.02;letter-spacing:-.07em}
+    .project-copy{max-width:425px;color:#e3e3d6;font-size:14px}
+    .project .button-primary{background:#f2efe7;color:var(--ink);margin-top:18px}
+    .map-art{position:absolute;z-index:1;top:0;right:0;width:55%;height:100%;opacity:.95;pointer-events:none}
+    .map-art svg{width:100%;height:100%;display:block}
+    .project-index{position:absolute;top:24px;right:28px;z-index:2;font:11px var(--mono);letter-spacing:.12em;color:#cbd1bd}
+    .about{display:grid;grid-template-columns:.65fr 1.35fr;gap:60px;padding:74px 0 82px;align-items:start}
+    .about-copy{max-width:650px;color:var(--muted);font-size:17px;line-height:1.85}
+    .about-copy p{margin:0 0 14px}
+    .footer{padding:24px 0 34px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:20px;color:var(--muted);font-size:12px}
+    .footer-links{display:flex;gap:20px}.footer-links a{text-decoration:none;color:var(--ink);font-weight:700}.footer-links a:hover{color:var(--accent)}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:4px;border-radius:4px}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,560px)}.topbar{height:70px}.nav{gap:16px}.nav .nav-work{display:none}.hero{min-height:0;grid-template-columns:1fr;gap:46px;padding:70px 0}.hero-copy{order:1}.portrait-wrap{order:0;width:min(74%,300px);margin:0 auto 8px}.portrait-note{right:-12px}.project{grid-template-columns:1fr;min-height:540px;align-content:start}.project-info{align-self:start;padding-top:56px}.map-art{top:auto;bottom:0;width:100%;height:52%}.project-index{top:20px;right:20px}.about{grid-template-columns:1fr;gap:20px;padding:58px 0}.section-head{align-items:start;flex-direction:column}.section-note{max-width:460px}.footer{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Maaz Khawaja","jobTitle":"Software Developer and Game Creator","url":"https://github.com/Darkmatterindustries","sameAs":["https://github.com/Darkmatterindustries","https://apps.microsoft.com/detail/9plc90crllt7"]}
+  </script>
+</head>
+<body>
+  <header class="wrap topbar">
+    <a class="wordmark" href="#top" aria-label="Maaz Khawaja home"><span class="mark" aria-hidden="true">MK</span><span>Maaz Khawaja</span></a>
+    <nav class="nav" aria-label="Main navigation"><a class="nav-work" href="#work">Selected work</a><a href="https://github.com/Darkmatterindustries" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a><a class="nav-cta" href="#about">About me</a></nav>
+  </header>
+  <main id="top" class="wrap">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Software developer · Game creator</p>
+        <h1 id="intro-title">I build tools and <span>worlds</span> worth exploring.</h1>
+        <p class="intro">I'm Maaz Khawaja. I create useful software and interactive experiences, including <em>The Last Map: Horse Riding</em>.</p>
+        <div class="actions"><a class="button button-primary" href="#work">Explore my work <span class="arrow" aria-hidden="true">↓</span></a><a class="button button-plain" href="https://github.com/Darkmatterindustries" target="_blank" rel="noreferrer">GitHub profile <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="portrait-wrap"><div class="portrait-ring" aria-hidden="true"></div><div class="portrait-frame"><img src="/assets/maaz-khawaja.jpg" alt="Portrait of Maaz Khawaja" width="640" height="640"></div><div class="portrait-note">Currently making<strong>new things, one build at a time</strong></div></div>
+    </section>
+    <hr class="divider">
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="section-head"><div><p class="section-label">A project I made</p><h2 id="work-title">Selected work</h2></div><p class="section-note">I like turning an idea into something you can open, play, and explore.</p></div>
+      <article class="project">
+        <div class="project-info"><p class="eyebrow">01 / Game development</p><h3>The Last Map: Horse Riding</h3><p class="project-copy">An exploration game built around the freedom of riding out and discovering what lies beyond the next ridge.</p><a class="button button-primary" href="https://apps.microsoft.com/detail/9plc90crllt7" target="_blank" rel="noreferrer">View on Microsoft Store <span class="arrow" aria-hidden="true">↗</span></a></div>
+        <span class="project-index">45° 12′ N&nbsp; · &nbsp;FIELD NOTE 01</span>
+        <div class="map-art" aria-hidden="true"><svg viewBox="0 0 600 420" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"><g stroke="#b2c0a7" stroke-opacity=".42" stroke-width="1.2"><path d="M325-26C282 48 395 72 347 133s-161 68-97 143 206 34 185 145"/><path d="M355-40C306 42 424 82 374 143s-164 66-99 143 213 39 198 145"/><path d="M386-50C340 34 456 90 404 151s-164 64-99 142 218 43 211 142"/><path d="M415-55C374 27 485 98 432 160s-161 65-98 143 221 45 224 136"/><path d="M444-58C409 21 513 105 459 170s-158 66-97 143 224 47 235 133"/><path d="M470-56C440 12 541 114 487 181s-156 68-97 145 225 49 247 129"/><path d="M-17 101c94 13 157-66 246-26 56 26 28 91 93 105 75 16 163-59 300-39"/><path d="M-25 132c99 15 166-58 251-20 54 24 26 88 93 103 77 17 164-51 301-31"/><path d="M-30 163c102 16 171-50 256-15 52 21 25 85 93 100 78 18 165-43 302-23"/><path d="M-33 194c106 18 175-43 260-9 50 19 24 82 93 97 80 18 166-36 303-16"/><path d="M-35 225c107 20 182-35 266-4 49 18 23 78 93 94 83 19 168-27 305-8"/></g><path d="M108 319C185 277 213 281 271 246s79-82 146-74" stroke="#e6b079" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 9"/><circle cx="108" cy="319" r="7" fill="#f2efe7" stroke="#e6b079" stroke-width="3"/><circle cx="417" cy="172" r="7" fill="#e6b079"/><path d="M438 92l13 35 35 13-35 13-13 35-13-35-35-13 35-13 13-35Z" fill="#e6b079" fill-opacity=".85"/></svg></div>
+      </article>
+    </section>
+    <hr class="divider">
+    <section class="about" id="about" aria-labelledby="about-title"><p class="section-label">A little about me</p><div class="about-copy"><h2 id="about-title">Curious by nature.<br>Builder by habit.</h2><p>I’m a software developer and game creator who enjoys shaping ideas into clear, thoughtful experiences. My work spans practical apps and interactive worlds, with <em>The Last Map: Horse Riding</em> as a project I’m proud to share.</p><p>Thanks for stopping by. You can follow what I build on GitHub or visit the game on the Microsoft Store.</p><a class="button button-plain" href="https://github.com/Darkmatterindustries" target="_blank" rel="noreferrer">Find me on GitHub <span class="arrow" aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> Maaz Khawaja</span><div class="footer-links"><a href="https://github.com/Darkmatterindustries" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://apps.microsoft.com/detail/9plc90crllt7" target="_blank" rel="noreferrer">The Last Map ↗</a><a href="#top">Back to top ↑</a></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>
